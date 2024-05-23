@@ -21,7 +21,7 @@ public class Hooks1 {
         new VideoManager().startRecording();
     }
 
-    @After
+    @After("@fhs")
     public void quit(Scenario scenario) throws IOException {
         if(scenario.isFailed()){
             byte[] screenshot = new DriverManager().getDriver().getScreenshotAs(OutputType.BYTES);
