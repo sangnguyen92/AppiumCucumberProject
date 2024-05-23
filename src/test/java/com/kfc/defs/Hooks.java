@@ -23,7 +23,7 @@ public class Hooks {
 
 
 
-    @After
+    @After("@kfc")
     public void quit(Scenario scenario) throws IOException {
         if(scenario.isFailed()){
             byte[] screenshot = new DriverManager().getDriver().getScreenshotAs(OutputType.BYTES);
